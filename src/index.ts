@@ -1,5 +1,3 @@
-const a: string = 1
-
 interface User {
   name: string
   age: number
