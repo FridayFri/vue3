@@ -20,5 +20,4 @@ type T31 = Filter<'a' | 'b' | 'c' | 'd', 'a' | 'c' | 'f'> // => "a" | "c"
 type TTuple = [string, number, boolean]
 
 type ElementOf<T> = T extends Array<infer E> ? E : never
-
 type ToUnion = ElementOf<TTuple>
