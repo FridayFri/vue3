@@ -20,3 +20,5 @@ type TTuple = [string, number, boolean]
 type ElementOf<T> = T extends Array<infer E> ? E : never
 
 type ToUnion = ElementOf<TTuple>
+
+const a = 1
