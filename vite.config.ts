@@ -1,6 +1,6 @@
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { resolve } from 'path'
 import { visualizer } from 'rollup-plugin-visualizer'
 
 // https://vitejs.dev/config/
@@ -14,19 +14,12 @@ export default defineConfig({
     })
   ],
   css: {
-    postcss: {
-      plugins: [
-        {
-          postcssPlugin: 'internal:charset-removal',
-          AtRule: {
-            charset: (atRule) => {
-              if (atRule.name === 'charset') {
-                atRule.remove()
-              }
-            }
-          }
-        }
-      ]
+    // css预处理器
+    preprocessorOptions: {
+      less: {
+        charset: false
+        // additionalData: '@import "./src/assets/style/global.less";'
+      }
     }
   },
   resolve: {

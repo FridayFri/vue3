@@ -1,10 +1,11 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import type { RouteRecordRaw } from 'vue-router'
 import Home from '@/views/home.vue'
-import Vuex from '@/views/vuex.vue'
+import Calendar from '@/components/calendar/calendar.vue'
 
 const routes: Array<RouteRecordRaw> = [
   { path: '/', name: 'home', component: Home },
-  { path: '/vuex', name: 'vuex', component: Vuex },
+  { path: '/calendar', name: 'calendar', component: Calendar },
   {
     path: '/axios',
     name: 'axios',
